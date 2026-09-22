@@ -1,259 +1,594 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Privacy Policy | Free Robux Rewards</title>
-  <meta name="description" content="Privacy Policy for Free Robux Rewards">
-  <style>
-    :root {
-      --bg: #f7f8fb;
-      --card: #ffffff;
-      --text: #16181d;
-      --muted: #5f6673;
-      --border: #e5e7eb;
-      --accent: #111827;
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-    }
-    .wrap {
-      width: min(920px, calc(100% - 32px));
-      margin: 48px auto;
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 36px;
-      box-shadow: 0 8px 30px rgba(0,0,0,.04);
-    }
-    h1 { margin: 0 0 8px; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; }
-    h2 { margin-top: 34px; font-size: 1.35rem; }
-    p, li { font-size: 1rem; }
-    .meta { color: var(--muted); margin-bottom: 28px; }
-    .notice {
-      padding: 16px 18px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      background: #fafafa;
-    }
-    a { color: var(--accent); font-weight: 600; }
-    ul { padding-left: 22px; }
-    footer {
-      color: var(--muted);
-      text-align: center;
-      padding: 22px 0 4px;
-      font-size: .92rem;
-    }
-    @media (max-width: 640px) {
-      .wrap { margin: 20px auto; }
-      .card { padding: 24px 20px; border-radius: 14px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Robux Rewards</title>
+    <!-- App: Robux Rewards -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --robux-green: #00B06F;
+            --robux-green-bright: #00D98A;
+            --robux-dark: #0d0d0d;
+            --robux-surface: #141414;
+            --robux-card: #1a1a1a;
+            --robux-border: rgba(255,255,255,0.07);
+            --robux-muted: #5a5a5a;
+            --robux-text: #e8e8e8;
+            --robux-subtext: #888;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--robux-dark);
+            color: var(--robux-text);
+            font-family: 'Nunito', sans-serif;
+            line-height: 1.7;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Subtle grid background */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,176,111,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,176,111,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ===== NAV ===== */
+        .nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(13,13,13,0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--robux-border);
+            padding: 0 24px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-back {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            border: 1px solid var(--robux-border);
+            background: var(--robux-card);
+            color: var(--robux-text);
+            cursor: pointer;
+            transition: border-color 0.2s, background 0.2s;
+            flex-shrink: 0;
+        }
+
+        .nav-back:hover {
+            border-color: var(--robux-green);
+            background: rgba(0,176,111,0.1);
+            color: var(--robux-green-bright);
+        }
+
+        .nav-back svg {
+            width: 15px;
+            height: 15px;
+        }
+
+        .nav-label {
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            color: var(--robux-subtext);
+            text-transform: uppercase;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            z-index: 1;
+            padding: 64px 24px 48px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,176,111,0.12) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .hero-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #00B06F, #00D98A);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 40px rgba(0,176,111,0.35), 0 8px 24px rgba(0,0,0,0.4);
+            animation: iconPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes iconPulse {
+            0%, 100% { box-shadow: 0 0 40px rgba(0,176,111,0.35), 0 8px 24px rgba(0,0,0,0.4); }
+            50% { box-shadow: 0 0 60px rgba(0,176,111,0.55), 0 8px 24px rgba(0,0,0,0.4); }
+        }
+
+        .hero-icon svg {
+            width: 36px;
+            height: 36px;
+            fill: white;
+        }
+
+        .hero-title {
+            font-size: clamp(26px, 5vw, 38px);
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .hero-title span {
+            color: var(--robux-green-bright);
+        }
+
+        .hero-sub {
+            font-size: 15px;
+            color: var(--robux-subtext);
+            font-weight: 600;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: 18px;
+            padding: 5px 14px;
+            border-radius: 100px;
+            border: 1px solid rgba(0,176,111,0.3);
+            background: rgba(0,176,111,0.08);
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--robux-green-bright);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            font-family: 'Space Mono', monospace;
+        }
+
+        .hero-badge::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--robux-green-bright);
+            box-shadow: 0 0 6px var(--robux-green-bright);
+        }
+
+        /* ===== CONTENT ===== */
+        .content-wrap {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 0 24px 80px;
+        }
+
+        /* TOC */
+        .toc {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 40px;
+        }
+
+        .toc-item {
+            padding: 6px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--robux-border);
+            background: var(--robux-card);
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--robux-subtext);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: border-color 0.2s, color 0.2s, background 0.2s;
+            font-family: 'Space Mono', monospace;
+        }
+
+        .toc-item:hover {
+            border-color: var(--robux-green);
+            color: var(--robux-green-bright);
+            background: rgba(0,176,111,0.08);
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 4px;
+            border: 1px solid var(--robux-border);
+            border-radius: 14px;
+            overflow: hidden;
+            background: var(--robux-card);
+            transition: border-color 0.25s;
+        }
+
+        .section:hover {
+            border-color: rgba(0,176,111,0.2);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 18px 22px;
+            cursor: pointer;
+            user-select: none;
+            list-style: none;
+        }
+
+        .section-num {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--robux-green);
+            background: rgba(0,176,111,0.12);
+            border: 1px solid rgba(0,176,111,0.2);
+            padding: 3px 8px;
+            border-radius: 6px;
+            letter-spacing: 0.05em;
+            flex-shrink: 0;
+            min-width: 38px;
+            text-align: center;
+        }
+
+        .section-heading {
+            font-size: 16px;
+            font-weight: 800;
+            color: #fff;
+            flex: 1;
+        }
+
+        .section-chevron {
+            width: 18px;
+            height: 18px;
+            color: var(--robux-muted);
+            transition: transform 0.3s ease, color 0.2s;
+            flex-shrink: 0;
+        }
+
+        details[open] .section-chevron {
+            transform: rotate(180deg);
+            color: var(--robux-green);
+        }
+
+        details[open] .section-header {
+            border-bottom: 1px solid var(--robux-border);
+        }
+
+        .section-body {
+            padding: 20px 22px;
+            font-size: 15px;
+            color: var(--robux-subtext);
+            line-height: 1.75;
+        }
+
+        .section-body p + p {
+            margin-top: 12px;
+        }
+
+        .section-body ul {
+            margin: 12px 0;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .section-body ul li {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .section-body ul li::before {
+            content: '▸';
+            color: var(--robux-green);
+            font-size: 12px;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .section-body strong {
+            color: var(--robux-text);
+            font-weight: 700;
+        }
+
+        .contact-card {
+            margin-top: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            border-radius: 10px;
+            border: 1px solid var(--robux-border);
+            background: var(--robux-surface);
+            font-family: 'Space Mono', monospace;
+            font-size: 13px;
+            color: var(--robux-green-bright);
+            text-decoration: none;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .contact-card:hover {
+            border-color: var(--robux-green);
+            background: rgba(0,176,111,0.08);
+        }
+
+        .contact-card svg {
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            position: relative;
+            z-index: 1;
+            border-top: 1px solid var(--robux-border);
+            padding: 28px 24px;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 16px;
+        }
+
+        .footer-link {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--robux-subtext);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: var(--robux-green-bright);
+        }
+
+        .footer-copy {
+            font-size: 12px;
+            color: var(--robux-muted);
+            font-family: 'Space Mono', monospace;
+        }
+
+        /* Stagger animation on load */
+        .section {
+            opacity: 0;
+            transform: translateY(12px);
+            animation: slideUp 0.4s ease forwards;
+        }
+
+        .section:nth-child(1) { animation-delay: 0.05s; }
+        .section:nth-child(2) { animation-delay: 0.10s; }
+        .section:nth-child(3) { animation-delay: 0.15s; }
+        .section:nth-child(4) { animation-delay: 0.20s; }
+        .section:nth-child(5) { animation-delay: 0.25s; }
+        .section:nth-child(6) { animation-delay: 0.30s; }
+        .section:nth-child(7) { animation-delay: 0.35s; }
+
+        @keyframes slideUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero {
+            opacity: 0;
+            animation: slideUp 0.5s ease 0.05s forwards;
+        }
+
+        .toc {
+            opacity: 0;
+            animation: slideUp 0.4s ease 0.1s forwards;
+        }
+
+        @media (max-width: 600px) {
+            .hero { padding: 48px 20px 36px; }
+            .content-wrap { padding: 0 16px 60px; }
+            .section-header { padding: 16px 16px; }
+            .section-body { padding: 16px 16px; }
+            .section-heading { font-size: 15px; }
+        }
+    </style>
 </head>
 <body>
-  <main class="wrap">
-    <article class="card">
-      <h1>Privacy Policy</h1>
-      <div class="meta">
-        <strong>Free Robux Rewards</strong><br>
-        Effective date: September 21, 2026
-      </div>
 
-      <p>
-        This Privacy Policy explains how Free Robux Rewards ("the App", "we", "us", or "our")
-        collects, uses, stores, and shares information when you use the App.
-      </p>
+    <!-- Nav -->
+    <nav class="nav">
+        <button class="nav-back" onclick="history.back()" aria-label="Go back">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5M12 5l-7 7 7 7"/>
+            </svg>
+        </button>
+        <span class="nav-label">Privacy Policy</span>
+    </nav>
 
-      <div class="notice">
-        <strong>Important:</strong> Free Robux Rewards is an independent app and is not affiliated with,
-        sponsored by, or endorsed by Roblox Corporation. Roblox is a trademark of Roblox Corporation.
-      </div>
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-icon">
+            <!-- Robux R icon -->
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 4h7.5C16.5 4 18 5.5 18 8c0 1.8-1 3.1-2.5 3.7L18 20h-3.5l-2.8-7.8H9.5V20H6V4zm3.5 2.8v3.4h3.7c.9 0 1.5-.7 1.5-1.7 0-1-.6-1.7-1.5-1.7H9.5z"/>
+            </svg>
+        </div>
+        <h1 class="hero-title">Robux Rewards<br><span>Privacy Policy</span></h1>
+        <p class="hero-sub">Robux Rewards · Get Gift Card</p>
+        <div class="hero-badge">Last updated: March 27, 2026</div>
+    </header>
 
-      <h2>1. Information We Collect</h2>
-      <p>Depending on how you use the App, we may collect or process the following categories of information:</p>
-      <ul>
-        <li><strong>Account information:</strong> Firebase user ID, sign-in provider, and email address if you create or link an account using Google or email/password.</li>
-        <li><strong>Profile information:</strong> nickname/display name, avatar selection, profile visibility, and similar profile preferences.</li>
-        <li><strong>Reward and gameplay information:</strong> Coin balance, XP, level, streaks, mission progress, game sessions, game results, reward claims, and related timestamps.</li>
-        <li><strong>Redemption information:</strong> reward tier, Coin cost, RBX amount, redemption status, payout batch, and fulfillment history. If you voluntarily provide a username or other payout identifier for manual fulfillment, we use it only for reward delivery, support, fraud prevention, and recordkeeping.</li>
-        <li><strong>Device and app information:</strong> app version, Firebase Cloud Messaging token, installation-related identifiers needed for notifications, App Check/Play Integrity signals, and technical diagnostics.</li>
-        <li><strong>Advertising information:</strong> ad impressions, rewarded-ad claims, AdMob transaction identifiers, consent signals, and other information processed by Google Mobile Ads/AdMob.</li>
-        <li><strong>Integrity and abuse-prevention information:</strong> suspicious activity indicators, impossible game-result attempts, duplicate reward attempts, redemption-risk indicators, and related security events.</li>
-        <li><strong>Diagnostics and analytics:</strong> crash, performance, and analytics information when those services are enabled and permitted by your consent/settings.</li>
-        <li><strong>Support information:</strong> information you send to us when contacting support.</li>
-      </ul>
+    <!-- Content -->
+    <main class="content-wrap">
 
-      <h2>2. Information Stored Only on Your Device</h2>
-      <p>
-        Some preferences may be stored locally on your device, such as theme, language, sound/haptics,
-        reminder preferences, cached profile information, and temporary game state. Locally stored information
-        may be removed when you clear app data or uninstall the App.
-      </p>
+        <!-- TOC chips -->
+        <nav class="toc" aria-label="Jump to section">
+            <a href="#intro" class="toc-item">01 Introduction</a>
+            <a href="#data" class="toc-item">02 Data We Collect</a>
+            <a href="#use" class="toc-item">03 How We Use It</a>
+            <a href="#admob" class="toc-item">04 AdMob</a>
+            <a href="#security" class="toc-item">05 Security</a>
+            <a href="#rights" class="toc-item">06 Your Rights</a>
+            <a href="#contact" class="toc-item">07 Contact</a>
+        </nav>
 
-      <h2>3. How We Use Information</h2>
-      <p>We use information to:</p>
-      <ul>
-        <li>create and maintain your account;</li>
-        <li>provide game, mission, streak, Coin, XP, and reward features;</li>
-        <li>validate reward eligibility and prevent duplicate or fraudulent reward claims;</li>
-        <li>process and manually fulfill redemption requests;</li>
-        <li>send account, reward, and status notifications when enabled;</li>
-        <li>show and measure advertising;</li>
-        <li>provide customer support;</li>
-        <li>protect the App, our users, and our reward economy from abuse;</li>
-        <li>diagnose crashes, performance problems, and technical errors; and</li>
-        <li>comply with legal and platform requirements.</li>
-      </ul>
+        <!-- Sections as accordions -->
+        <details class="section" id="intro" open>
+            <summary class="section-header">
+                <span class="section-num">01</span>
+                <span class="section-heading">Introduction</span>
+                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="section-body">
+                <p>Welcome to <strong>Robux Rewards — Get Gift Card</strong>. We respect your privacy and want to protect your personal data. This privacy policy explains how we handle your information when you use our app and outlines your privacy rights.</p>
+            </div>
+        </details>
 
-      <h2>4. Advertising and Consent</h2>
-      <p>
-        The App uses Google AdMob to display advertising, including rewarded and interstitial ads.
-        We do not use banner ads in the current version of the App.
-      </p>
-      <p>
-        Where required, we use Google's User Messaging Platform (UMP) to request or manage consent
-        and privacy choices. If you decline personalized advertising or opt out of certain data uses,
-        you may still see non-personalized or limited ads where permitted by applicable law and Google's
-        advertising systems. Ads are requested only when the applicable Google consent state allows ad requests.
-      </p>
-      <p>
-        Rewarded ads are optional. Choosing not to watch a rewarded ad does not prevent you from accessing
-        the basic App experience. Rewarded ads may provide optional benefits such as an extra spin, extra scratch,
-        revive, hint, retry, or other eligible bonus.
-      </p>
+        <details class="section" id="data">
+            <summary class="section-header">
+                <span class="section-num">02</span>
+                <span class="section-heading">Data We Collect</span>
+                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="section-body">
+                <p>We may collect the following types of personal data:</p>
+                <ul>
+                    <li><strong>Identity Data</strong> — name and unique identifier.</li>
+                    <li><strong>Contact Data</strong> — email address.</li>
+                    <li><strong>Usage Data</strong> — information about how you use the app and services.</li>
+                    <li><strong>Device Data</strong> — device type, operating system, and app version.</li>
+                </ul>
+            </div>
+        </details>
 
-      <h2>5. Rewarded Ads and Server-Side Verification</h2>
-      <p>
-        Rewarded-ad benefits are verified through server-side systems. We may process a Firebase user ID,
-        claim identifier, placement type, AdMob transaction identifier, and verification timestamps to validate
-        that a rewarded ad was completed and to prevent replay or duplicate rewards.
-      </p>
+        <details class="section" id="use">
+            <summary class="section-header">
+                <span class="section-num">03</span>
+                <span class="section-heading">How We Use Your Data</span>
+                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="section-body">
+                <p>We use your personal data only where the law permits. Common purposes include:</p>
+                <ul>
+                    <li>Providing you with reward services.</li>
+                    <li>Managing your account and diamond balance.</li>
+                    <li>Processing gift card redemption requests.</li>
+                    <li>Improving the app and overall service quality.</li>
+                    <li>Sending important updates and notifications.</li>
+                </ul>
+            </div>
+        </details>
 
-      <h2>6. Firebase and Google Services</h2>
-      <p>The App uses Google/Firebase services that may process information on our behalf, including:</p>
-      <ul>
-        <li>Firebase Authentication;</li>
-        <li>Cloud Firestore;</li>
-        <li>Cloud Functions for Firebase;</li>
-        <li>Firebase App Check / Google Play Integrity;</li>
-        <li>Firebase Cloud Messaging;</li>
-        <li>Firebase Analytics, Crashlytics, and Performance Monitoring where enabled;</li>
-        <li>Google Mobile Ads / AdMob; and</li>
-        <li>Google User Messaging Platform.</li>
-      </ul>
-      <p>
-        Google's handling of information is governed by Google's own terms and privacy policies.
-      </p>
+        <details class="section" id="admob">
+            <summary class="section-header">
+                <span class="section-num">04</span>
+                <span class="section-heading">AdMob &amp; Third Parties</span>
+                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="section-body">
+                <p>This app uses <strong>Google AdMob</strong> to serve advertisements. Google may use information about your visits to this and other apps to provide ads relevant to your interests.</p>
+                <p>We also work with third-party partners for analytics, crash reporting, and performance monitoring to continuously improve your experience.</p>
+                <p>For more on how Google handles your data, please review <strong>Google's Privacy Policy</strong>.</p>
+            </div>
+        </details>
 
-      <h2>7. How We Share Information</h2>
-      <p>We do not sell your personal information. We may share or make information available:</p>
-      <ul>
-        <li>with Google/Firebase/AdMob as service providers and advertising technology providers;</li>
-        <li>with service providers that help operate the App, where necessary;</li>
-        <li>when required by law, legal process, or government request;</li>
-        <li>to investigate fraud, security incidents, or abuse; or</li>
-        <li>as part of a business transfer, merger, acquisition, or similar transaction, subject to applicable law.</li>
-      </ul>
+        <details class="section" id="security">
+            <summary class="section-header">
+                <span class="section-num">05</span>
+                <span class="section-heading">Data Security</span>
+                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="section-body">
+                <p>We have implemented appropriate security measures to prevent your personal data from being accidentally lost, misused, or accessed without authorization. Access to your data is limited to those with a legitimate business need.</p>
+            </div>
+        </details>
 
-      <h2>8. Reward Redemptions and Manual Fulfillment</h2>
-      <p>
-        Reward redemptions are not automatically delivered by Firebase. Redemption requests are reviewed and
-        fulfilled manually. We use redemption information to verify eligibility, hold or refund Coins, manage
-        payout batches, track delivery status, and maintain an audit history.
-      </p>
-      <p>
-        Pending, rejected, cancelled, and delivered redemption records may be retained for fraud prevention,
-        accounting, support, dispute handling, and legal compliance for an appropriate period.
-      </p>
+        <details class="section" id="rights">
+            <summary class="section-header">
+                <span class="section-num">06</span>
+                <span class="section-heading">Your Rights</span>
+                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="section-body">
+                <p>Depending on your location, you may have rights under applicable data protection laws, including:</p>
+                <ul>
+                    <li>Right to access your personal data.</li>
+                    <li>Right to correct inaccurate data.</li>
+                    <li>Right to request erasure of your data.</li>
+                    <li>Right to restrict or object to processing.</li>
+                    <li>Right to data portability.</li>
+                    <li>Right to withdraw consent at any time.</li>
+                </ul>
+                <p>You can exercise these rights by contacting us at <strong>ffdiamondapp1221@gmail.com</strong>.</p>
+            </div>
+        </details>
 
-      <h2>9. Data Retention</h2>
-      <p>
-        We retain information only for as long as reasonably necessary for the purposes described in this Policy,
-        including operating the reward system, preventing abuse, resolving disputes, fulfilling redemptions,
-        maintaining security records, and meeting legal or accounting obligations.
-      </p>
-      <p>
-        Temporary records such as reward claims, game sessions, device tokens, and verification records may be
-        deleted or expired automatically after defined retention periods. Some completed redemption or audit records
-        may be anonymized instead of deleted when retention is necessary for fraud prevention, accounting, or legal reasons.
-      </p>
+        <details class="section" id="contact">
+            <summary class="section-header">
+                <span class="section-num">07</span>
+                <span class="section-heading">Contact Us</span>
+                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="section-body">
+                <p>Have questions about this policy or your data? We're here to help.</p>
+                <a href="mailto:ffdiamondapp1221@gmail.com" class="contact-card">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/>
+                    </svg>
+                    ffdiamondapp1221@gmail.com
+                </a>
+            </div>
+        </details>
 
-      <h2>10. Account Deletion</h2>
-      <p>
-        You may request deletion of your account and associated personal information through the account-deletion
-        feature in the App or by contacting us at
-        <a href="mailto:freerbxrewards.help@gmail.com">freerbxrewards.help@gmail.com</a>.
-      </p>
-      <p>
-        When an account is deleted, we delete or anonymize information associated with the account except where
-        retention is reasonably necessary for legal, security, fraud-prevention, accounting, or dispute-resolution purposes.
-        Certain active redemption requests may need to be completed, cancelled, or otherwise resolved before deletion can finish.
-      </p>
+    </main>
 
-      <h2>11. Security</h2>
-      <p>
-        We use technical and organizational safeguards designed to protect information, including Firebase
-        Authentication, Firestore security rules, server-side reward validation, App Check/Play Integrity,
-        restricted administrative access, and server-side verification for rewarded advertising.
-      </p>
-      <p>
-        No method of transmission or storage is completely secure, so we cannot guarantee absolute security.
-      </p>
-
-      <h2>12. Children's Privacy</h2>
-      <p>
-        The App is intended for users aged 13 and older and is not directed to children under 13.
-        We do not knowingly collect personal information from children under 13. If we learn that we have
-        collected personal information from a child under 13 without appropriate authorization, we will take
-        reasonable steps to delete it.
-      </p>
-      <p>
-        Users must also meet any higher minimum age required by the laws of their country or region.
-      </p>
-
-      <h2>13. Your Privacy Choices and Rights</h2>
-      <p>Depending on your location, you may have rights to:</p>
-      <ul>
-        <li>access, correct, or delete personal information;</li>
-        <li>object to or restrict certain processing;</li>
-        <li>withdraw consent where processing is based on consent;</li>
-        <li>use the App's available privacy-options entry to update advertising choices; and</li>
-        <li>submit a complaint to an applicable data-protection authority.</li>
-      </ul>
-
-      <h2>14. International Data Processing</h2>
-      <p>
-        The services used by the App may process information in countries other than the country where you live.
-        Where required, our service providers use legal safeguards for international data transfers.
-      </p>
-
-      <h2>15. Changes to This Privacy Policy</h2>
-      <p>
-        We may update this Privacy Policy as the App changes or as legal and platform requirements change.
-        We will update the effective date above when we make changes. Material changes may also be communicated
-        through the App or another appropriate notice.
-      </p>
-
-      <h2>16. Contact Us</h2>
-      <p>
-        For privacy questions, account-deletion requests, or support, contact:
-      </p>
-      <p>
-        <strong>Email:</strong>
-        <a href="mailto:freerbxrewards.help@gmail.com">freerbxrewards.help@gmail.com</a>
-      </p>
-    </article>
-
-    <footer>
-      © 2026 Free Robux Rewards. All rights reserved.
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#" class="footer-link">Terms of Service</a>
+            <a href="#" class="footer-link">Privacy Policy</a>
+            <a href="mailto:ffdiamondapp1221@gmail.com" class="footer-link">Contact</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Robux Rewards. All rights reserved.</p>
     </footer>
-  </main>
+
 </body>
 </html>
