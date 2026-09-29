@@ -454,7 +454,7 @@
         </div>
         <h1 class="hero-title">RBX Rewards<br><span>Privacy Policy</span></h1>
         <p class="hero-sub">RBX Rewards: Robux Calculator · Android app</p>
-        <div class="hero-badge">Last updated: September 23, 2026</div>
+        <div class="hero-badge">Last updated: September 29, 2026</div>
     </header>
 
     <!-- Content -->
@@ -508,7 +508,7 @@
                 <ul>
                     <li><strong>Account information</strong>: a Firebase user ID and, if you create an account, your email address, the username you choose and how you sign in (Google, or email and password). If you sign in with Google, we receive the basic account details Google provides for sign-in. We also record when the account was created.</li>
                     <li><strong>Profile choices</strong>: your nickname and selected avatar.</li>
-                    <li><strong>Game, mission and reward activity</strong>: Coins, XP, level, streak, missions, games played, daily reward status and your Coin history.</li>
+                    <li><strong>Game, mission and reward activity</strong>: Coins, streak, missions, games played, daily reward status and your Coin history.</li>
                     <li><strong>Redemption information</strong> for reward requests you make.</li>
                     <li><strong>Advertising information</strong> handled by Google when ads are requested or shown (see Advertising).</li>
                     <li><strong>A notification token</strong>, only if you allow notifications.</li>
@@ -529,7 +529,7 @@
                     <li>To run the app: sign you in, save your progress and show your balance and history.</li>
                     <li>To calculate, record and limit rewards on our servers, and to review redemption requests.</li>
                     <li>To detect and prevent bots, duplicate claims and other misuse of the reward system.</li>
-                    <li>To show rankings, if your profile is public.</li>
+                    <li>To show rankings (Weekly, Monthly and All-Time), which list the nickname, avatar and Coins earned of the top players.</li>
                     <li>To show the reminders you asked for, and to tell you when a reward request changes status.</li>
                     <li>To show ads and respect your ad choices.</li>
                     <li>To answer support requests you send us, and to keep the service working.</li>
@@ -545,7 +545,7 @@
             </summary>
             <div class="section-body">
                 <p>You can start playing as a guest. A guest session uses an anonymous Firebase user ID, with no email or name. To redeem rewards you need to create an account or sign in (email and password, or Google), with a verified email.</p>
-                <p>If you turn a guest session into an account, your existing progress stays with it. If you sign in to an account you already have, the guest session&rsquo;s available Coins are moved to that account once by our servers; the guest&rsquo;s other progress is not merged.</p>
+                <p>If you turn a guest session into an account, your existing progress stays with it. If you sign in to an account you already have, the guest session&rsquo;s available Coins are moved to that account once by our servers; the guest&rsquo;s other progress is not merged. An account can receive Coins from one guest session only.</p>
             </div>
         </details>
 
@@ -559,12 +559,12 @@
                 <p>Rewards are decided and recorded by our servers, never by the app on your phone, so the following is stored with your account:</p>
                 <ul>
                     <li>Your Coin balance, Coins held for pending reward requests, and lifetime totals.</li>
-                    <li>XP, level and streak.</li>
+                    <li>Your Day Streak (how many days in a row you have been active).</li>
                     <li>Daily mission progress and claims, games played, and Daily Bonus, Spin &amp; Win and Lucky Scratch results.</li>
                     <li>Coin history: each credit or spend with its date and source (for example a game, a mission or a reward request).</li>
                     <li>When a game run finishes, the run&rsquo;s result (for example score, duration and game statistics) so the server can check it before paying. Individual moves and taps are not sent.</li>
                 </ul>
-                <p>Reward requests record the reward you chose, its cost, the country you selected, the time and the status (for example Pending, Approved, Delivered, Not approved or Cancelled). We may keep abuse-prevention signals about an account, such as risk scores and review notes, only to protect the reward system.</p>
+                <p>Reward requests record the reward you chose, its cost, the country you selected, the time and the status (for example Pending, Approved, Delivered, Not approved or Cancelled). To be eligible for a reward request, an account must, among other checks, have been active 7 days in a row; your Day Streak is used for that check. You can cancel a pending request in the app (Profile, then History), which returns its Coins. We may keep abuse-prevention signals about an account, such as risk scores and review notes, only to protect the reward system.</p>
             </div>
         </details>
 
@@ -578,8 +578,8 @@
                 <p>The app uses Google Mobile Ads (AdMob) to show ads. Three formats are used:</p>
                 <ul>
                     <li><strong>App open ads</strong>, which may appear when you open or return to the app.</li>
-                    <li><strong>Interstitial ads</strong>, which may appear between screens (at most after every third screen change, and never during a game, a claim, sign-in or a reward request).</li>
-                    <li><strong>Rewarded ads</strong>, only as an optional choice after a game over, to continue that run once. Watching one gives no Coins by itself.</li>
+                    <li><strong>Interstitial ads</strong>, which may appear between screens: after every third qualifying action (opening a game, finishing a game or opening a content screen), and when you choose &ldquo;Back to Games&rdquo; after a game. Never during a game, a claim, sign-in or a reward request.</li>
+                    <li><strong>Rewarded ads</strong>, always as an option you choose: to continue a game run once after a game over; to &ldquo;Play Again&rdquo; after a game over; for one extra Spin &amp; Win and one extra Lucky Scratch a day (the extra play&rsquo;s prize is decided by our servers like any other play); and to unlock the RBX Calculator for 30 minutes. If no ad is available, Play Again and the calculator work without one.</li>
                 </ul>
                 <p>There are no banner ads.</p>
                 <p>When an ad is requested or shown, Google and its advertising partners may process information such as device and app information, your device&rsquo;s advertising ID where available, ad interaction information and general location derived from your IP address, under Google&rsquo;s own policies. On Android you can reset or delete your advertising ID, or opt out of ad personalization, in your device&rsquo;s Google settings.</p>
@@ -627,7 +627,7 @@
             </summary>
             <div class="section-body">
                 <p>Notifications are off until you allow them. The app offers reminders once, after your first Daily Bonus, and you can also turn them on in Profile, then Reminders. Only then does the app ask Android for notification permission.</p>
-                <p>Daily reminders are scheduled on your device, at most three a day: in the morning when the Daily Bonus is ready, around midday if missions are unfinished, and in the evening if the day&rsquo;s check-in is still open. A reminder is skipped when what it would announce is already done. They are created on your device and are not sent from our servers.</p>
+                <p>Daily reminders are scheduled on your device, at most three a day: in the morning when the Daily Bonus is ready, around midday if missions are unfinished, and in the evening if the day&rsquo;s check-in is still open. A reminder is skipped when what it would announce is already done. If you have not opened the app for a couple of days, one Daily Bonus reminder a day continues until you open the app again, turn reminders off, or uninstall the app. They are created on your device and are not sent from our servers.</p>
                 <p>When you allow notifications, the app also creates a Firebase Cloud Messaging token and saves it with your account, so we can tell you when a reward request changes status. Whether the Daily Bonus and mission reminders are on is saved on your device and with your account. You can switch reminders off in the app, or turn notifications off in your device settings, at any time.</p>
             </div>
         </details>
@@ -639,7 +639,7 @@
                 <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
             </summary>
             <div class="section-body">
-                <p>The app keeps on your device: preferences (language, theme, sound, music, haptics), reminder and notification choices, profile details you entered and your avatar, cached content and progress (including a copy of the day&rsquo;s missions and daily reward status, shown only while the app reconnects), and game results waiting to be sent when you are back online. This is removed when you clear the app&rsquo;s data or uninstall it. The app does not keep passwords on the device.</p>
+                <p>The app keeps on your device: preferences (language, theme, sound, music, haptics), reminder and notification choices, profile details you entered and your avatar, cached content and progress (including a copy of the day&rsquo;s missions and daily reward status, shown only while the app reconnects), game results waiting to be sent when you are back online, and when the RBX Calculator unlock ends. The RBX Calculator works entirely on your device: the numbers you enter are not saved or sent anywhere. None of this is included in device backups. This is removed when you clear the app&rsquo;s data or uninstall it. The app does not keep passwords on the device.</p>
             </div>
         </details>
 
@@ -650,7 +650,7 @@
                 <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
             </summary>
             <div class="section-body">
-                <p>We share information only with the providers needed to run the app: Google (Firebase, Google Sign-In, AdMob and its consent platform). We may also disclose information if the law requires it, or to protect against fraud and abuse. Rankings show your nickname, avatar and level to other players only if your profile is public.</p>
+                <p>We share information only with the providers needed to run the app: Google (Firebase, Google Sign-In, AdMob and its consent platform). We may also disclose information if the law requires it, or to protect against fraud and abuse. Rankings show the nickname, avatar and Coins earned in the period of the top players to other players.</p>
             </div>
         </details>
 
@@ -703,7 +703,7 @@
                     <li>Select <strong>Delete Account</strong>.</li>
                     <li>Confirm.</li>
                 </ul>
-                <p>Deletion starts on our servers straight away. It is refused while a reward request is still being processed, and the app tells you so. Signing out does not delete anything.</p>
+                <p>Deletion starts on our servers straight away. It is refused while a reward request is still being processed, and the app tells you so; you can cancel a pending request in Profile, then History, and then delete your account. Signing out does not delete anything.</p>
                 <p><strong>Request deletion without the app, or as a guest</strong></p>
                 <p>Email us with the subject line <strong>Account Deletion Request</strong>, and include your in-app username. Where possible, send it from the email address of your account so we can verify ownership.</p>
                 <a href="mailto:freerbxrewards.help@gmail.com?subject=Account%20Deletion%20Request" class="contact-card">
