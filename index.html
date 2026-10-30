@@ -1,832 +1,1057 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Privacy Policy for the BuxRo: Rewards and Games Android app.">
-    <title>Privacy Policy — BuxRo: Rewards and Games</title>
-    <!-- App: BuxRo: Rewards and Games (com.madaxe.sohan.robloxreward) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --robux-green: #00B06F;
-            --robux-green-bright: #00D98A;
-            --robux-dark: #0d0d0d;
-            --robux-surface: #141414;
-            --robux-card: #1a1a1a;
-            --robux-border: rgba(255,255,255,0.07);
-            --robux-muted: #5a5a5a;
-            --robux-text: #e8e8e8;
-            --robux-subtext: #888;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta
+    name="description"
+    content="Privacy policy and account deletion information for BuxRo: Games &amp; Rewards."
+  >
 
-        html {
-            scroll-behavior: smooth;
-        }
+  <title>Privacy Policy — BuxRo: Games &amp; Rewards</title>
 
-        body {
-            background-color: var(--robux-dark);
-            color: var(--robux-text);
-            font-family: 'Nunito', sans-serif;
-            line-height: 1.7;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
+  <style>
+    :root {
+      color-scheme: dark;
+      --background: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --text: #f0f6fc;
+      --muted: #b1bac4;
+      --accent: #6ee7b7;
+    }
 
-        /* Subtle grid background */
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(0,176,111,0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0,176,111,0.03) 1px, transparent 1px);
-            background-size: 40px 40px;
-            pointer-events: none;
-            z-index: 0;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        /* ===== NAV ===== */
-        .nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(13,13,13,0.85);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid var(--robux-border);
-            padding: 0 24px;
-            height: 56px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 24px;
+    }
 
-        .nav-back {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 34px;
-            height: 34px;
-            border-radius: 8px;
-            border: 1px solid var(--robux-border);
-            background: var(--robux-card);
-            color: var(--robux-text);
-            cursor: pointer;
-            transition: border-color 0.2s, background 0.2s;
-            flex-shrink: 0;
-        }
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      line-height: 1.75;
+    }
 
-        .nav-back:hover {
-            border-color: var(--robux-green);
-            background: rgba(0,176,111,0.1);
-            color: var(--robux-green-bright);
-        }
+    header,
+    main,
+    footer {
+      width: min(100% - 36px, 820px);
+      margin-inline: auto;
+    }
 
-        .nav-back svg {
-            width: 15px;
-            height: 15px;
-        }
+    header {
+      padding: 56px 0 28px;
+      text-align: center;
+    }
 
-        .nav-label {
-            font-size: 14px;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            color: var(--robux-subtext);
-            text-transform: uppercase;
-        }
+    .privacy-icon {
+      display: grid;
+      place-items: center;
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 20px;
+      border-radius: 20px;
+      background: #153d32;
+      color: var(--accent);
+    }
 
-        /* ===== HERO ===== */
-        .hero {
-            position: relative;
-            z-index: 1;
-            padding: 64px 24px 48px;
-            text-align: center;
-            overflow: hidden;
-        }
+    .privacy-icon svg {
+      width: 38px;
+      height: 38px;
+    }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(0,176,111,0.12) 0%, transparent 70%);
-            pointer-events: none;
-            z-index: -1;
-        }
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 6vw, 42px);
+      line-height: 1.2;
+    }
 
-        .hero-icon {
-            width: 72px;
-            height: 72px;
-            margin: 0 auto 20px;
-            background: linear-gradient(135deg, #00B06F, #00D98A);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 40px rgba(0,176,111,0.35), 0 8px 24px rgba(0,0,0,0.4);
-            animation: iconPulse 3s ease-in-out infinite;
-        }
+    .app-name {
+      margin: 14px 0 6px;
+      font-weight: 700;
+      color: var(--accent);
+    }
 
-        @keyframes iconPulse {
-            0%, 100% { box-shadow: 0 0 40px rgba(0,176,111,0.35), 0 8px 24px rgba(0,0,0,0.4); }
-            50% { box-shadow: 0 0 60px rgba(0,176,111,0.55), 0 8px 24px rgba(0,0,0,0.4); }
-        }
+    .updated,
+    .package {
+      margin: 6px 0;
+      color: var(--muted);
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
 
-        .hero-icon svg {
-            width: 36px;
-            height: 36px;
-            fill: white;
-        }
+    .quick-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 24px 0 0;
+    }
 
-        .hero-title {
-            font-size: clamp(26px, 5vw, 38px);
-            font-weight: 900;
-            letter-spacing: -0.02em;
-            color: #fff;
-            margin-bottom: 8px;
-        }
+    .quick-links a {
+      display: inline-block;
+      padding: 9px 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--surface);
+      text-decoration: none;
+    }
 
-        .hero-title span {
-            color: var(--robux-green-bright);
-        }
+    a {
+      color: var(--accent);
+      overflow-wrap: anywhere;
+    }
 
-        .hero-sub {
-            font-size: 15px;
-            color: var(--robux-subtext);
-            font-weight: 600;
-        }
+    a:hover {
+      text-decoration: underline;
+    }
 
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            margin-top: 18px;
-            padding: 5px 14px;
-            border-radius: 100px;
-            border: 1px solid rgba(0,176,111,0.3);
-            background: rgba(0,176,111,0.08);
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--robux-green-bright);
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            font-family: 'Space Mono', monospace;
-        }
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
 
-        .hero-badge::before {
-            content: '';
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--robux-green-bright);
-            box-shadow: 0 0 6px var(--robux-green-bright);
-        }
+    main {
+      padding-bottom: 32px;
+    }
 
-        /* ===== CONTENT ===== */
-        .content-wrap {
-            position: relative;
-            z-index: 1;
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 0 24px 80px;
-        }
+    details,
+    .deletion-section {
+      margin: 14px 0;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--surface);
+    }
 
-        /* TOC */
-        .toc {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 40px;
-        }
+    summary {
+      padding: 18px 20px;
+      font-size: 17px;
+      font-weight: 700;
+      cursor: pointer;
+    }
 
-        .toc-item {
-            padding: 6px 14px;
-            border-radius: 8px;
-            border: 1px solid var(--robux-border);
-            background: var(--robux-card);
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--robux-subtext);
-            text-decoration: none;
-            letter-spacing: 0.02em;
-            transition: border-color 0.2s, color 0.2s, background 0.2s;
-            font-family: 'Space Mono', monospace;
-        }
+    details[open] summary {
+      border-bottom: 1px solid var(--border);
+    }
 
-        .toc-item:hover {
-            border-color: var(--robux-green);
-            color: var(--robux-green-bright);
-            background: rgba(0,176,111,0.08);
-        }
+    .section-body {
+      padding: 4px 20px 20px;
+      color: var(--muted);
+    }
 
-        /* Sections */
-        .section {
-            margin-bottom: 4px;
-            border: 1px solid var(--robux-border);
-            border-radius: 14px;
-            overflow: hidden;
-            background: var(--robux-card);
-            transition: border-color 0.25s;
-        }
+    .section-body strong,
+    .section-body h3 {
+      color: var(--text);
+    }
 
-        .section:hover {
-            border-color: rgba(0,176,111,0.2);
-        }
+    p {
+      margin: 14px 0;
+    }
 
-        .section-header {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 18px 22px;
-            cursor: pointer;
-            user-select: none;
-            list-style: none;
-        }
+    ul {
+      padding-left: 22px;
+    }
 
-        .section-num {
-            font-family: 'Space Mono', monospace;
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--robux-green);
-            background: rgba(0,176,111,0.12);
-            border: 1px solid rgba(0,176,111,0.2);
-            padding: 3px 8px;
-            border-radius: 6px;
-            letter-spacing: 0.05em;
-            flex-shrink: 0;
-            min-width: 38px;
-            text-align: center;
-        }
+    li {
+      margin: 8px 0;
+    }
 
-        .section-heading {
-            font-size: 16px;
-            font-weight: 800;
-            color: #fff;
-            flex: 1;
-        }
+    code {
+      overflow-wrap: anywhere;
+    }
 
-        .section-chevron {
-            width: 18px;
-            height: 18px;
-            color: var(--robux-muted);
-            transition: transform 0.3s ease, color 0.2s;
-            flex-shrink: 0;
-        }
+    .deletion-section {
+      padding: 20px;
+      border-color: #397b63;
+    }
 
-        details[open] .section-chevron {
-            transform: rotate(180deg);
-            color: var(--robux-green);
-        }
+    .deletion-section h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
 
-        details[open] .section-header {
-            border-bottom: 1px solid var(--robux-border);
-        }
+    .deletion-section h3 {
+      margin-bottom: 8px;
+      font-size: 17px;
+    }
 
-        .section-body {
-            padding: 20px 22px;
-            font-size: 15px;
-            color: var(--robux-subtext);
-            line-height: 1.75;
-        }
+    .deletion-section p,
+    .deletion-section li {
+      color: var(--muted);
+    }
 
-        .section-body p + p {
-            margin-top: 12px;
-        }
+    .contact-link {
+      display: inline-block;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      text-decoration: none;
+    }
 
-        .section-body ul {
-            margin: 12px 0;
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
+    footer {
+      padding: 24px 0 40px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
 
-        .section-body ul li {
-            display: flex;
-            gap: 10px;
-            align-items: flex-start;
-        }
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
 
-        .section-body ul li::before {
-            content: '▸';
-            color: var(--robux-green);
-            font-size: 12px;
-            flex-shrink: 0;
-            margin-top: 3px;
-        }
+    @media print {
+      body {
+        background: white;
+        color: black;
+      }
 
-        .section-body strong {
-            color: var(--robux-text);
-            font-weight: 700;
-        }
+      details,
+      .deletion-section {
+        background: white;
+        border-color: #999;
+        break-inside: avoid;
+      }
 
-        .contact-card {
-            margin-top: 14px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 10px 16px;
-            border-radius: 10px;
-            border: 1px solid var(--robux-border);
-            background: var(--robux-surface);
-            font-family: 'Space Mono', monospace;
-            font-size: 13px;
-            color: var(--robux-green-bright);
-            text-decoration: none;
-            transition: border-color 0.2s, background 0.2s;
-        }
+      .section-body,
+      .deletion-section p,
+      .deletion-section li,
+      footer {
+        color: #222;
+      }
 
-        .contact-card:hover {
-            border-color: var(--robux-green);
-            background: rgba(0,176,111,0.08);
-        }
+      .section-body strong,
+      .section-body h3 {
+        color: black;
+      }
 
-        .contact-card svg {
-            width: 15px;
-            height: 15px;
-            flex-shrink: 0;
-        }
-
-        /* ===== FOOTER ===== */
-        .footer {
-            position: relative;
-            z-index: 1;
-            border-top: 1px solid var(--robux-border);
-            padding: 28px 24px;
-            text-align: center;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-bottom: 16px;
-        }
-
-        .footer-link {
-            font-size: 13px;
-            font-weight: 700;
-            color: var(--robux-subtext);
-            text-decoration: none;
-            letter-spacing: 0.02em;
-            transition: color 0.2s;
-        }
-
-        .footer-link:hover {
-            color: var(--robux-green-bright);
-        }
-
-        .footer-copy {
-            font-size: 12px;
-            color: var(--robux-muted);
-            font-family: 'Space Mono', monospace;
-        }
-
-        /* Stagger animation on load */
-        .section {
-            opacity: 0;
-            transform: translateY(12px);
-            animation: slideUp 0.4s ease forwards;
-        }
-
-        .section:nth-child(1) { animation-delay: 0.05s; }
-        .section:nth-child(2) { animation-delay: 0.10s; }
-        .section:nth-child(3) { animation-delay: 0.15s; }
-        .section:nth-child(4) { animation-delay: 0.20s; }
-        .section:nth-child(5) { animation-delay: 0.25s; }
-        .section:nth-child(6) { animation-delay: 0.30s; }
-        .section:nth-child(7) { animation-delay: 0.35s; }
-        .section:nth-child(n+8) { animation-delay: 0.4s; }
-
-        @keyframes slideUp {
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .hero {
-            opacity: 0;
-            animation: slideUp 0.5s ease 0.05s forwards;
-        }
-
-        .toc {
-            opacity: 0;
-            animation: slideUp 0.4s ease 0.1s forwards;
-        }
-
-        @media (max-width: 600px) {
-            .hero { padding: 48px 20px 36px; }
-            .content-wrap { padding: 0 16px 60px; }
-            .section-header { padding: 16px 16px; }
-            .section-body { padding: 16px 16px; }
-            .section-heading { font-size: 15px; }
-        }
-    </style>
+      a {
+        color: #145a43;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <header>
+    <div class="privacy-icon" aria-hidden="true">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.8"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 3 4 6v6c0 4.5 5 8 8 9 3-1 8-4.5 8-9V6l-8-3Z"/>
+        <path d="m8.5 12 2.3 2.3 4.7-4.7"/>
+      </svg>
+    </div>
 
-    <!-- Nav -->
-    <nav class="nav">
-        <button class="nav-back" onclick="history.back()" aria-label="Go back">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M19 12H5M12 5l-7 7 7 7"/>
-            </svg>
-        </button>
-        <span class="nav-label">Privacy Policy</span>
+    <h1>Privacy Policy</h1>
+    <p class="app-name">BuxRo: Games &amp; Rewards</p>
+    <p class="package">Android package: com.madaxe.sohan.robloxreward</p>
+    <p class="updated">Last updated: October 30, 2026</p>
+
+    <nav class="quick-links" aria-label="Privacy shortcuts">
+      <a href="#data">Information collected</a>
+      <a href="#ads">Advertising</a>
+      <a href="#delete-account">Delete account and data</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-    <!-- Hero -->
-    <header class="hero">
-        <div class="hero-icon">
-            <!-- Robux R icon -->
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 4h7.5C16.5 4 18 5.5 18 8c0 1.8-1 3.1-2.5 3.7L18 20h-3.5l-2.8-7.8H9.5V20H6V4zm3.5 2.8v3.4h3.7c.9 0 1.5-.7 1.5-1.7 0-1-.6-1.7-1.5-1.7H9.5z"/>
-            </svg>
-        </div>
-        <h1 class="hero-title">BuxRo<br><span>Privacy Policy</span></h1>
-        <p class="hero-sub">BuxRo: Rewards and Games · Android app</p>
-        <div class="hero-badge">Last updated: October 28, 2026</div>
-    </header>
+  <main>
+    <details id="intro" open>
+      <summary>1. Introduction</summary>
+      <div class="section-body">
+        <p>
+          This policy explains how
+          <strong>BuxRo: Games &amp; Rewards</strong>
+          (the “app”), operated by <strong>Mad Axe Studios</strong>,
+          handles information and what choices you have.
+          It applies to the Android app with package name
+          <code>com.madaxe.sohan.robloxreward</code>.
+        </p>
 
-    <!-- Content -->
-    <main class="content-wrap">
+        <p>
+          The app includes casual mini-games, daily missions and activities
+          such as Daily Bonus, Day Streak, Spin &amp; Win and Lucky Scratch.
+          Activity and reward records are used to maintain in-app Coins
+          and process eligible requests for the rewards displayed in the app.
+          The app also includes referral features and links to our other apps.
+        </p>
 
-        <!-- TOC chips -->
-        <nav class="toc" aria-label="Jump to section">
-            <a href="#intro" class="toc-item">01 Introduction</a>
-            <a href="#data" class="toc-item">02 Information We Collect</a>
-            <a href="#use" class="toc-item">03 How We Use Information</a>
-            <a href="#accounts" class="toc-item">04 Guest Accounts and Sign-in</a>
-            <a href="#activity" class="toc-item">05 Game, Mission and Reward Activity</a>
-            <a href="#referrals" class="toc-item">06 Refer &amp; Earn</a>
-            <a href="#more-apps" class="toc-item">07 More Apps From Us</a>
-            <a href="#ads" class="toc-item">08 Advertising and Your Ad Choices</a>
-            <a href="#diagnostics" class="toc-item">09 Analytics and Diagnostics</a>
-            <a href="#firebase" class="toc-item">10 Firebase and Google Services</a>
-            <a href="#notifications" class="toc-item">11 Notifications</a>
-            <a href="#device" class="toc-item">12 Data Stored on Your Device</a>
-            <a href="#sharing" class="toc-item">13 Sharing</a>
-            <a href="#retention" class="toc-item">14 Data Retention</a>
-            <a href="#security" class="toc-item">15 Data Security</a>
-            <a href="#rights" class="toc-item">16 Your Rights</a>
-            <a href="#delete-account" class="toc-item">17 Delete Account &amp; Data</a>
-            <a href="#children" class="toc-item">18 Children</a>
-            <a href="#unofficial" class="toc-item">19 Unofficial App</a>
-            <a href="#changes" class="toc-item">20 Changes to This Policy</a>
-            <a href="#contact" class="toc-item">21 Contact Us</a>
-        </nav>
+        <p>
+          This policy describes data handling. It does not promise reward
+          availability, delivery or eligibility.
+        </p>
 
-        <!-- Sections as accordions -->
-        <details class="section" id="intro" open>
-            <summary class="section-header">
-                <span class="section-num">01</span>
-                <span class="section-heading">Introduction</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>This policy explains what information <strong>BuxRo: Rewards and Games</strong> (formerly "RBX Rewards: Robux Calculator"; the "app") handles, why, and what choices you have. It describes the Android app as it works on the date above; we will update it when that changes.</p>
-                <p>The app is a casual games and rewards app: you play the available mini games, complete daily missions and take part in daily activities (Daily Bonus, Day Streak, Spin &amp; Win and Lucky Scratch) to earn in-app Coins, and you can use eligible Coins to request the rewards shown in the Store. You can also invite friends (Refer &amp; Earn) and find our other apps from the Earn screen.</p>
-                <p>If anything here is unclear, write to freerbxrewards.help@gmail.com.</p>
-            </div>
-        </details>
+        <p>
+          For privacy questions, contact
+          <a href="mailto:freerbxrewards.help@gmail.com">
+            freerbxrewards.help@gmail.com
+          </a>.
+        </p>
+      </div>
+    </details>
 
-        <details class="section" id="data">
-            <summary class="section-header">
-                <span class="section-num">02</span>
-                <span class="section-heading">Information We Collect</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>Depending on how you use the app, we and our service providers handle:</p>
-                <ul>
-                    <li><strong>Account information</strong>: a Firebase user ID and, if you create an account, your email address, the username you choose and how you sign in (Google, or email and password). If you sign in with Google, we receive the basic account details Google provides for sign-in. We also record when the account was created.</li>
-                    <li><strong>Profile choices</strong>: your nickname and selected avatar.</li>
-                    <li><strong>Game, mission and reward activity</strong>: Coins, streak, missions, games played, daily reward status and your Coin history.</li>
-                    <li><strong>Redemption information</strong> for reward requests you make.</li>
-                    <li><strong>Advertising information</strong> handled by Google when ads are requested or shown (see Advertising).</li>
-                    <li><strong>Refer &amp; Earn information</strong>, if you use it: your invite code, which account invited yours, and one-way hashes of the network (IP) address you connect from (see Refer &amp; Earn).</li>
-                    <li><strong>A notification token</strong>, only if you allow notifications.</li>
-                    <li><strong>Technical and diagnostic information</strong> (app usage events, crash reports and performance data), unless you switch &ldquo;Share diagnostics&rdquo; off (see Analytics and Diagnostics).</li>
-                </ul>
-                <p>The app does not ask for your contacts, precise location, photos, files, camera or microphone, and it never asks for your Roblox password.</p>
-            </div>
-        </details>
+    <details id="data">
+      <summary>2. Information We Collect</summary>
+      <div class="section-body">
+        <p>
+          Depending on how you use the app, we and our service providers
+          handle the following information:
+        </p>
 
-        <details class="section" id="use">
-            <summary class="section-header">
-                <span class="section-num">03</span>
-                <span class="section-heading">How We Use Information</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <ul>
-                    <li>To run the app: sign you in, save your progress and show your balance and history.</li>
-                    <li>To calculate, record and limit rewards on our servers, and to review redemption requests.</li>
-                    <li>To detect and prevent bots, duplicate claims and other misuse of the reward system, including people inviting their own extra accounts.</li>
-                    <li>To run Refer &amp; Earn.</li>
-                    <li>To show rankings (Weekly, Monthly and All-Time), which list the display name (nickname), avatar and Coins earned of the top players. Other players see these names.</li>
-                    <li>To show the reminders you asked for, and to tell you when a reward request changes status.</li>
-                    <li>To show ads and respect your ad choices.</li>
-                    <li>To answer support requests you send us by email, and to keep the service working.</li>
-                </ul>
-            </div>
-        </details>
+        <ul>
+          <li>
+            <strong>Account information:</strong>
+            a Firebase user ID and, if you create an account, your email
+            address, chosen username, sign-in method and account creation
+            time. Sign-in methods include Google or email and password.
+            Google sign-in provides the basic account information needed
+            for authentication.
+          </li>
 
-        <details class="section" id="accounts">
-            <summary class="section-header">
-                <span class="section-num">04</span>
-                <span class="section-heading">Guest Accounts and Sign-in</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>You can start playing as a guest. A guest session uses an anonymous Firebase user ID, with no email or name. To redeem rewards you need to create an account or sign in (email and password, or Google), with a verified email.</p>
-                <p>If you turn a guest session into an account, your existing progress stays with it. If you sign in to an account you already have, the guest session&rsquo;s available Coins are moved to that account once by our servers; the guest&rsquo;s other progress is not merged. An account can receive Coins from one guest session only.</p>
-            </div>
-        </details>
+          <li>
+            <strong>Profile choices:</strong>
+            your nickname and selected avatar.
+          </li>
 
-        <details class="section" id="activity">
-            <summary class="section-header">
-                <span class="section-num">05</span>
-                <span class="section-heading">Game, Mission and Reward Activity</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>Rewards are decided and recorded by our servers, never by the app on your phone, so the following is stored with your account:</p>
-                <ul>
-                    <li>Your Coin balance, Coins held for pending reward requests, and lifetime totals.</li>
-                    <li>Your Day Streak (how many days in a row you have been active).</li>
-                    <li>Daily mission progress and claims, games played, and Daily Bonus, Spin &amp; Win and Lucky Scratch results.</li>
-                    <li>Coin history: each credit or spend with its date and source (for example a game, a mission or a reward request).</li>
-                    <li>When a game run finishes, the run&rsquo;s result (for example score, duration and game statistics) so the server can check it before paying. Individual moves and taps are not sent.</li>
-                </ul>
-                <p>Reward requests record the reward you chose, its cost, the country you selected, the time and the status (for example Pending, Approved, Delivered, Not approved or Cancelled). To be eligible for a reward request, an account must, among other checks, have been active 7 days in a row; your Day Streak is used for that check. You can cancel a pending request in the app (Profile, then History), which returns its Coins. We may keep abuse-prevention signals about an account, such as risk scores and review notes, only to protect the reward system.</p>
-            </div>
-        </details>
+          <li>
+            <strong>Game, mission and reward activity:</strong>
+            Coins, streaks, missions, games played, daily activity status
+            and Coin history.
+          </li>
 
-        <details class="section" id="referrals">
-            <summary class="section-header">
-                <span class="section-num">06</span>
-                <span class="section-heading">Refer &amp; Earn</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>Refer &amp; Earn lets you invite friends. The app creates an invite code and invite link for you. Sharing it uses your phone&rsquo;s own share sheet: we do not read your contacts and we do not see who you send it to.</p>
-                <p>When a friend installs the app from your invite link, Google Play passes your code to the app (the Play install referrer), or the friend can type your code in. We then record that your account invited theirs. A code can only be used in the first days of an account, and an account can be invited once.</p>
-                <p>You earn 50 Coins when a friend you invited has earned 250 Coins by playing. To prevent people inviting their own extra accounts, we keep one-way (salted SHA-256) hashes of the network (IP) address each account connects from, and a referral is rejected if the friend&rsquo;s network matches yours, or if two accounts invited each other. A hash cannot be turned back into the address, and we do not store the address itself. These records are kept on our servers and are not readable by other users; you see your friends only as anonymous entries with their status and Coin totals. Referral records are deleted with your account, as described under Delete Account &amp; Data, except where we need to keep limited records for fraud prevention.</p>
-            </div>
-        </details>
+          <li>
+            <strong>Redemption information:</strong>
+            information associated with reward requests you submit.
+          </li>
 
-        <details class="section" id="more-apps">
-            <summary class="section-header">
-                <span class="section-num">07</span>
-                <span class="section-heading">More Apps From Us</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>The Earn screen has a &ldquo;More apps from us&rdquo; section linking to the developer&rsquo;s other apps on Google Play. Tapping a link opens Google Play and no data about you is shared with us or the other apps by the app. Installing those apps does not earn Coins in this app.</p>
-            </div>
-        </details>
+          <li>
+            <strong>Advertising information:</strong>
+            information processed by Google and its advertising partners
+            when ads are requested or displayed.
+          </li>
 
-        <details class="section" id="ads">
-            <summary class="section-header">
-                <span class="section-num">08</span>
-                <span class="section-heading">Advertising and Your Ad Choices</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>The app uses Google Mobile Ads (AdMob) to show ads. Three formats are used:</p>
-                <ul>
-                    <li><strong>App open ads</strong>, which may appear when you open or return to the app.</li>
-                    <li><strong>Interstitial ads</strong>, which may appear between screens: after qualifying actions (opening or finishing a game, or opening a content screen), and when you choose &ldquo;Back to Games&rdquo; after a game. Never during a game, a claim, sign-in or a reward request.</li>
-                    <li><strong>Rewarded ads</strong>, always as an option you choose: to continue a game run once after a game over; to &ldquo;Play Again&rdquo; after a game over; for one extra Spin &amp; Win and one extra Lucky Scratch a day (the extra play&rsquo;s prize is decided by our servers like any other play); and to unlock the RBX Calculator for 30 minutes. If no ad is available, Play Again and the calculator work without one.</li>
-                </ul>
-                <p>There are no banner ads.</p>
-                <p>When an ad is requested or shown, Google and its advertising partners may process information such as device and app information, your device&rsquo;s advertising ID where available, ad interaction information and general location derived from your IP address, under Google&rsquo;s own policies. On Android you can reset or delete your advertising ID, or opt out of ad personalization, in your device&rsquo;s Google settings.</p>
-                <p>Where the law requires it (for example in the EEA, the UK and some US states), the app asks for your choices through Google&rsquo;s User Messaging Platform before any ad is requested, and no ad is requested until that step allows it. If you decline personalized ads, Google may still show non-personalized or limited ads as its rules allow. You can review or change your choice at any time in the app: Profile, then Privacy choices.</p>
-                <p>To confirm that a rewarded ad was completed, the app passes your app user ID and a one-time claim ID to Google, and Google sends a confirmation to our servers. Ad content is limited to a teen rating. We do not give advertisers your email, name or reward history, and we do not sell personal information.</p>
-            </div>
-        </details>
+          <li>
+            <strong>Referral information:</strong>
+            your invitation code, the account that invited you and
+            pseudonymous hashes of network IP addresses used for
+            abuse prevention.
+          </li>
 
-        <details class="section" id="diagnostics">
-            <summary class="section-header">
-                <span class="section-num">09</span>
-                <span class="section-heading">Analytics and Diagnostics</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>The app uses Firebase Analytics, Crashlytics and Performance Monitoring to count usage events (which screens and games are used), record crash reports, and measure speed. Collection is on by default. You can turn it off at any time in Profile, then Legal, with &ldquo;Share diagnostics&rdquo;. These tools receive event names, small numeric values, app version, device model and OS version, and crash stack traces; we do not send your nickname or email to them.</p>
-            </div>
-        </details>
+          <li>
+            <strong>Notification information:</strong>
+            a notification token when you allow notifications.
+          </li>
 
-        <details class="section" id="firebase">
-            <summary class="section-header">
-                <span class="section-num">10</span>
-                <span class="section-heading">Firebase and Google Services</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>The app runs on Google Firebase:</p>
-                <ul>
-                    <li><strong>Firebase Authentication</strong>: guest, email and Google sign-in.</li>
-                    <li><strong>Cloud Firestore</strong>: stores your account, progress, Coin activity, reward requests and public ranking entries.</li>
-                    <li><strong>Cloud Functions</strong>: the server logic that awards and checks rewards and handles reward and account requests.</li>
-                    <li><strong>Firebase App Check</strong> (with Google Play Integrity): helps confirm that requests come from the genuine app on a genuine device.</li>
-                    <li><strong>Firebase Remote Config</strong>: switches features, such as ads, on or off.</li>
-                    <li><strong>Firebase Analytics, Crashlytics and Performance Monitoring</strong>: usage events, crash reports and performance data, as described above.</li>
-                    <li><strong>Firebase Cloud Messaging</strong>: delivers notifications such as updates about your reward requests, only after you allow notifications.</li>
-                </ul>
-                <p>Google Sign-In is used if you choose to sign in with Google. Google processes this data for us and may store it on servers in other countries. Google&rsquo;s services have their own privacy policies: <a href="https://policies.google.com/privacy" rel="noopener">policies.google.com/privacy</a>.</p>
-            </div>
-        </details>
+          <li>
+            <strong>Technical and diagnostic information:</strong>
+            app usage events, crash reports and performance data,
+            subject to the app’s diagnostics settings.
+          </li>
+        </ul>
 
-        <details class="section" id="notifications">
-            <summary class="section-header">
-                <span class="section-num">11</span>
-                <span class="section-heading">Notifications</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>Notifications are off until you allow them. The app offers reminders once, after your first Daily Bonus, and you can also turn them on in Profile, then Reminders. Only then does the app ask Android for notification permission.</p>
-                <p>Daily reminders are scheduled on your device, at most three a day: in the morning when the Daily Bonus is ready, around midday if missions are unfinished, and in the evening if the day&rsquo;s check-in is still open. A reminder is skipped when what it would announce is already done. If you have not opened the app for a couple of days, one Daily Bonus reminder a day continues until you open the app again, turn reminders off, or uninstall the app. They are created on your device and are not sent from our servers.</p>
-                <p>When you allow notifications, the app also creates a Firebase Cloud Messaging token and saves it with your account, so we can send you notifications, for example when a reward request changes status. Whether the Daily Bonus and mission reminders are on is saved on your device and with your account. You can switch reminders off in the app, or turn notifications off in your device settings, at any time.</p>
-            </div>
-        </details>
+        <p>
+          The app does not request access to your contacts, precise
+          location, photos, files, camera or microphone. It does not
+          request your Roblox password.
+        </p>
+      </div>
+    </details>
 
-        <details class="section" id="device">
-            <summary class="section-header">
-                <span class="section-num">12</span>
-                <span class="section-heading">Data Stored on Your Device</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>The app keeps on your device: preferences (language, theme, sound, music, haptics), reminder and notification choices, profile details you entered and your avatar, cached content and progress (including a copy of the day&rsquo;s missions and daily reward status, shown only while the app reconnects), game results waiting to be sent when you are back online, and when the RBX Calculator unlock ends. The RBX Calculator works entirely on your device: the numbers you enter are not saved or sent anywhere. None of this is included in device backups. This is removed when you clear the app&rsquo;s data or uninstall it. The app does not keep passwords on the device.</p>
-            </div>
-        </details>
+    <details id="use">
+      <summary>3. How We Use Information</summary>
+      <div class="section-body">
+        <ul>
+          <li>
+            To authenticate users, save progress and display balances
+            and activity history.
+          </li>
+          <li>
+            To calculate, record and limit in-app rewards on our servers
+            and review reward requests.
+          </li>
+          <li>
+            To detect bots, duplicate requests, self-referrals and other
+            misuse of the app.
+          </li>
+          <li>To operate referral features.</li>
+          <li>
+            To display weekly, monthly and all-time leaderboards.
+            These may show top players’ display names, selected avatars
+            and Coins earned.
+          </li>
+          <li>
+            To provide requested reminders and reward-request status
+            notifications.
+          </li>
+          <li>To display advertising and respect advertising choices.</li>
+          <li>To answer support requests and maintain the service.</li>
+        </ul>
+      </div>
+    </details>
 
-        <details class="section" id="sharing">
-            <summary class="section-header">
-                <span class="section-num">13</span>
-                <span class="section-heading">Sharing</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>We share information only with the providers needed to run the app: Google (Firebase, Google Sign-In, AdMob and its consent platform). We may also disclose information if the law requires it, or to protect against fraud and abuse. Rankings show the display name, avatar and Coins earned in the period of the top players to other players.</p>
-            </div>
-        </details>
+    <details id="accounts">
+      <summary>4. Guest Accounts and Sign-in</summary>
+      <div class="section-body">
+        <p>
+          You can begin as a guest. Guest sessions use an anonymous
+          Firebase user ID without requiring an email address or name.
+        </p>
 
-        <details class="section" id="retention">
-            <summary class="section-header">
-                <span class="section-num">14</span>
-                <span class="section-heading">Data Retention</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>Profile and progress information is kept while your account exists. Reward records (Coin activity and reward requests) exist so balances and requests can be checked and abuse investigated; some may be kept after an account is deleted where needed for security, fraud prevention, record-keeping or legal reasons. Short-lived technical records (for example daily state and ad claims) are removed automatically after a limited period.</p>
-            </div>
-        </details>
+        <p>
+          Reward requests require an account and a verified email.
+          Supported sign-in methods include email and password or Google.
+        </p>
 
-        <details class="section" id="security">
-            <summary class="section-header">
-                <span class="section-num">15</span>
-                <span class="section-heading">Data Security</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>We use reasonable safeguards, including encrypted connections, server-side reward checks, database access rules and App Check. No system is completely secure, so we cannot guarantee absolute security. Please keep your sign-in details private.</p>
-            </div>
-        </details>
+        <p>
+          When a guest session is converted into an account, its existing
+          progress stays with it. If you sign in to an existing account,
+          the guest session’s available Coins are transferred to that
+          account once by our servers. Other guest progress is not merged.
+          An account can receive Coins from one guest session only.
+        </p>
+      </div>
+    </details>
 
-        <details class="section" id="rights">
-            <summary class="section-header">
-                <span class="section-num">16</span>
-                <span class="section-heading">Your Rights</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>Depending on where you live, you may have the right to access, correct or delete your personal data, to object to or restrict some processing, to data portability, and to withdraw consent at any time (for ads: Profile, then Privacy choices).</p>
-                <p>To exercise these rights, contact us at freerbxrewards.help@gmail.com. We may ask for details to confirm the account is yours.</p>
-            </div>
-        </details>
+    <details id="activity">
+      <summary>5. Game, Mission and Reward Activity</summary>
+      <div class="section-body">
+        <p>
+          Reward activity is checked and recorded by our servers.
+          Information associated with your account includes:
+        </p>
 
-        <details class="section" id="delete-account">
-            <summary class="section-header">
-                <span class="section-num">17</span>
-                <span class="section-heading">Delete Account &amp; Data</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>Users of <strong>BuxRo: Rewards and Games</strong> can request permanent deletion of their account and associated data.</p>
-                <p><strong>Delete your account in the app</strong></p>
-                <ul>
-                    <li>Open BuxRo: Rewards and Games and sign in.</li>
-                    <li>Go to Profile.</li>
-                    <li>Select <strong>Delete Account</strong>.</li>
-                    <li>Confirm.</li>
-                </ul>
-                <p>Deletion starts on our servers straight away. It is refused while a reward request is still being processed, and the app tells you so; you can cancel a pending request in Profile, then History, and then delete your account. Signing out does not delete anything.</p>
-                <p><strong>Request deletion without the app, or as a guest</strong></p>
-                <p>Email us with the subject line <strong>Account Deletion Request</strong>, and include your in-app username. Where possible, send it from the email address of your account so we can verify ownership.</p>
-                <a href="mailto:freerbxrewards.help@gmail.com?subject=Account%20Deletion%20Request" class="contact-card">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/>
-                    </svg>
-                    freerbxrewards.help@gmail.com
-                </a>
-                <p><strong>What is deleted</strong></p>
-                <ul>
-                    <li>Account and profile information, and the sign-in associated with it.</li>
-                    <li>App progress, Coin balance, missions and streak.</li>
-                    <li>Ranking and public profile entries.</li>
-                    <li>Notification tokens and devices.</li>
-                    <li>Other Firebase data directly linked to the account.</li>
-                </ul>
-                <p><strong>What may be kept</strong></p>
-                <p>Limited reward records (such as Coin activity and completed reward requests, anonymised where possible) may be kept where reasonably required for fraud and abuse prevention, security, legal obligations or resolving disputes, and only for as long as necessary. Deleting your account does not delete records held independently by Google as an advertising provider. Uninstalling the app does not by itself delete account data stored on our servers.</p>
-            </div>
-        </details>
+        <ul>
+          <li>
+            Coin balance, Coins reserved for pending reward requests
+            and lifetime totals.
+          </li>
+          <li>Day Streak and daily mission progress.</li>
+          <li>
+            Games played and Daily Bonus, Spin &amp; Win and
+            Lucky Scratch activity.
+          </li>
+          <li>
+            Coin credits and spending, including dates and the source
+            of each transaction.
+          </li>
+          <li>
+            Completed game-run results, such as scores, duration and
+            game statistics used for server checks.
+            Individual moves and taps are not sent.
+          </li>
+          <li>
+            Reward requests, including the selected reward, Coin cost,
+            selected country, request time and processing status.
+          </li>
+        </ul>
 
-        <details class="section" id="children">
-            <summary class="section-header">
-                <span class="section-num">18</span>
-                <span class="section-heading">Children</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>The app is intended for people aged 13 and over, and ad content is limited to a teen rating. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has given us information, contact us and we will delete it.</p>
-            </div>
-        </details>
+        <p>
+          Reward eligibility checks may include activity on seven
+          consecutive days. Day Streak information is used for this check.
+          The current conditions shown in the app apply.
+        </p>
 
-        <details class="section" id="unofficial">
-            <summary class="section-header">
-                <span class="section-num">19</span>
-                <span class="section-heading">Unofficial App</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>BuxRo: Rewards and Games is an unofficial, independently operated app. It is not affiliated with, endorsed by, sponsored by, authorized by or approved by Roblox Corporation. Roblox and Robux are trademarks of their respective owner. Coins are not Robux and have no cash value.</p>
-            </div>
-        </details>
+        <p>
+          You can cancel a pending request through Profile, then History.
+          Its reserved Coins are returned.
+        </p>
 
-        <details class="section" id="changes">
-            <summary class="section-header">
-                <span class="section-num">20</span>
-                <span class="section-heading">Changes to This Policy</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>We may update this policy when the app changes. The date at the top shows when it was last updated.</p>
-            </div>
-        </details>
+        <p>
+          We may retain abuse-prevention information, including account
+          risk signals and review notes, to protect the reward system.
+        </p>
+      </div>
+    </details>
 
-        <details class="section" id="contact">
-            <summary class="section-header">
-                <span class="section-num">21</span>
-                <span class="section-heading">Contact Us</span>
-                <svg class="section-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-            </summary>
-            <div class="section-body">
-                <p>Questions about this policy or your data? Write to us.</p>
-                <a href="mailto:freerbxrewards.help@gmail.com" class="contact-card">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/>
-                    </svg>
-                    freerbxrewards.help@gmail.com
-                </a>
-            </div>
-        </details>
+    <details id="referrals">
+      <summary>6. Referral Features</summary>
+      <div class="section-body">
+        <p>
+          The referral feature creates an invitation code and link.
+          Sharing uses your device’s share sheet. We do not read your
+          contacts or receive a list of the people you share with.
+        </p>
 
-    </main>
+        <p>
+          When an invited person installs the app, Google Play may pass
+          the invitation code through the Play install referrer.
+          The invited person can also enter a code manually.
+          We record the relationship between the referring and invited
+          accounts.
+        </p>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-links">
-            <a href="#intro" class="footer-link">Privacy Policy</a>
-            <a href="#delete-account" class="footer-link">Delete Account &amp; Data</a>
-            <a href="mailto:freerbxrewards.help@gmail.com" class="footer-link">Contact</a>
-        </div>
-        <p class="footer-copy">&copy; 2026 BuxRo: Rewards and Games. Unofficial app, not affiliated with Roblox Corporation.</p>
-    </footer>
+        <p>
+          A code can be used only during the initial eligibility period
+          of an account, and an account can be invited once.
+          The existing referral rules award 50 Coins after an invited
+          friend earns 250 Coins through eligible gameplay.
+          Check the app for current conditions.
+        </p>
 
-    <script>
-        // A link to a section (for example #delete-account from Google Play)
-        // opens that section instead of landing on a closed accordion.
-        function openFromHash() {
-            var el = document.getElementById(location.hash.slice(1));
-            if (el && el.tagName === 'DETAILS') { el.open = true; el.scrollIntoView(); }
-        }
-        window.addEventListener('hashchange', openFromHash);
-        document.addEventListener('DOMContentLoaded', openFromHash);
-    </script>
+        <p>
+          To prevent self-referrals and duplicate claims, the system
+          stores salted SHA-256 hashes of network IP addresses.
+          Referrals may be rejected when network hashes match or
+          accounts invite each other.
+        </p>
 
+        <p>
+          These hashes are pseudonymous abuse-prevention identifiers;
+          they are not treated as anonymous data. Raw IP addresses are
+          not stored in these referral records.
+        </p>
+
+        <p>
+          Referral records are held on our servers and are not readable
+          by other users. Referral entries shown to you do not identify
+          other users by their account details.
+        </p>
+
+        <p>
+          Referral records are deleted with the account, except where
+          limited records must be retained for fraud prevention,
+          security or other reasons described below.
+        </p>
+      </div>
+    </details>
+
+    <details id="more-apps">
+      <summary>7. Links to Our Other Apps</summary>
+      <div class="section-body">
+        <p>
+          The app includes a “More apps from us” section linking to our
+          other Google Play listings. Selecting a link opens Google Play.
+        </p>
+
+        <p>
+          The app does not send your account details to those other apps
+          when you select a link. Installing another app does not award
+          Coins in BuxRo.
+        </p>
+      </div>
+    </details>
+
+    <details id="ads">
+      <summary>8. Advertising and Your Choices</summary>
+      <div class="section-body">
+        <p>
+          The app uses Google Mobile Ads, also known as AdMob.
+          Advertising formats include:
+        </p>
+
+        <ul>
+          <li>
+            <strong>App open ads:</strong>
+            ads that may appear when opening or returning to the app.
+          </li>
+          <li>
+            <strong>Interstitial ads:</strong>
+            ads between eligible actions or screens, including after
+            opening or finishing a game or returning to the games screen.
+            They are not displayed during gameplay, claims, sign-in or
+            reward-request submission.
+          </li>
+          <li>
+            <strong>Optional rewarded ads:</strong>
+            ads selected by the user for supported features, such as
+            continuing a game, playing again, additional daily activities
+            or temporarily unlocking the calculator.
+          </li>
+        </ul>
+
+        <p>
+          The existing calculator unlock lasts 30 minutes.
+          If an ad is unavailable, the calculator and Play Again remain
+          available without one. The app does not use banner ads.
+        </p>
+
+        <p>
+          When ads are requested or displayed, Google and its advertising
+          partners may process device and app information, advertising
+          identifiers where available, ad interactions and approximate
+          location derived from IP addresses.
+        </p>
+
+        <p>
+          You can reset or delete your advertising ID or manage ad
+          personalization through your Android device’s Google settings.
+        </p>
+
+        <p>
+          Where required, the app uses Google’s User Messaging Platform
+          to request advertising choices before requesting ads.
+          Ads are not requested until the consent platform allows it.
+          Depending on your choices and applicable rules, Google may
+          display non-personalized or limited ads.
+        </p>
+
+        <p>
+          You can review advertising choices in the app through
+          Profile, then Privacy choices.
+        </p>
+
+        <p>
+          To verify completion of rewarded ads, the app provides Google
+          with the app user ID and a one-time claim ID.
+          Google sends a verification response to our servers.
+        </p>
+
+        <p>
+          Ad content is limited to a teen rating.
+          We do not provide advertisers with your email address, name
+          or reward history, and we do not sell personal information.
+        </p>
+      </div>
+    </details>
+
+    <details id="diagnostics">
+      <summary>9. Analytics and Diagnostics</summary>
+      <div class="section-body">
+        <p>
+          The app uses Firebase Analytics, Crashlytics and Performance
+          Monitoring to understand feature usage, record crashes and
+          measure performance.
+        </p>
+
+        <p>
+          Collection is enabled by default. You can disable it through
+          Profile, then Legal, using the “Share diagnostics” setting.
+        </p>
+
+        <p>
+          These services receive information such as event names,
+          small numeric values, app version, device model, operating
+          system version and crash stack traces.
+          We do not send your nickname or email address to these tools.
+        </p>
+      </div>
+    </details>
+
+    <details id="firebase">
+      <summary>10. Firebase and Google Services</summary>
+      <div class="section-body">
+        <p>The app uses the following Google services:</p>
+
+        <ul>
+          <li>
+            <strong>Firebase Authentication:</strong>
+            guest, email and Google authentication.
+          </li>
+          <li>
+            <strong>Cloud Firestore:</strong>
+            account records, progress, Coin activity, reward requests
+            and public leaderboard entries.
+          </li>
+          <li>
+            <strong>Cloud Functions:</strong>
+            server-side activity checks, reward processing and
+            account-related requests.
+          </li>
+          <li>
+            <strong>Firebase App Check and Google Play Integrity:</strong>
+            app and device integrity checks.
+          </li>
+          <li>
+            <strong>Firebase Remote Config:</strong>
+            feature configuration, including advertising settings.
+          </li>
+          <li>
+            <strong>Firebase Analytics, Crashlytics and Performance
+            Monitoring:</strong>
+            usage, crash and performance information.
+          </li>
+          <li>
+            <strong>Firebase Cloud Messaging:</strong>
+            notifications, including reward-request updates,
+            after notifications are allowed.
+          </li>
+          <li>
+            <strong>Google Sign-In:</strong>
+            authentication when you choose Google sign-in.
+          </li>
+        </ul>
+
+        <p>
+          Google processes information to provide these services.
+          Information may be stored on servers outside your country.
+        </p>
+
+        <p>
+          Google’s privacy policy:
+          <a href="https://policies.google.com/privacy">
+            https://policies.google.com/privacy
+          </a>
+        </p>
+      </div>
+    </details>
+
+    <details id="notifications">
+      <summary>11. Notifications</summary>
+      <div class="section-body">
+        <p>
+          Notifications remain off until you allow them.
+          The app may offer reminders after your first Daily Bonus.
+          You can also manage them through Profile, then Reminders.
+          Android notification permission is requested when appropriate.
+        </p>
+
+        <p>
+          Daily reminders are scheduled on your device, with up to three
+          reminders a day for Daily Bonus availability, unfinished
+          missions or an incomplete daily check-in.
+          Reminders are skipped when the corresponding activity is done.
+        </p>
+
+        <p>
+          If the app has not been opened for a couple of days,
+          a Daily Bonus reminder may continue once a day until you open
+          the app, disable reminders or uninstall it.
+          These reminders are generated locally.
+        </p>
+
+        <p>
+          When you allow notifications, a Firebase Cloud Messaging token
+          is associated with your account for server notifications.
+          Reminder preferences are stored on your device and with your
+          account.
+        </p>
+
+        <p>
+          You can disable reminders in the app or disable notifications
+          in your device settings.
+        </p>
+      </div>
+    </details>
+
+    <details id="device">
+      <summary>12. Information Stored on Your Device</summary>
+      <div class="section-body">
+        <p>
+          The app stores preferences such as language, theme, sound,
+          music and haptics; reminder choices; profile information and
+          avatar choices; cached content and progress; pending game
+          results awaiting an internet connection; and the calculator
+          unlock expiry time.
+        </p>
+
+        <p>
+          The calculator operates on your device.
+          Numbers entered into it are not saved or transmitted.
+        </p>
+
+        <p>
+          App data is excluded from device backups.
+          Local information is removed when you clear the app’s data
+          or uninstall it. The app does not store your passwords on
+          the device.
+        </p>
+
+        <p>
+          Removing local data does not by itself delete information
+          stored in your server account.
+          See the account deletion section below.
+        </p>
+      </div>
+    </details>
+
+    <details id="sharing">
+      <summary>13. Sharing Information</summary>
+      <div class="section-body">
+        <p>
+          We use Google services, including Firebase, Google Sign-In,
+          AdMob and Google’s consent platform, to operate the app.
+          Information is processed by these providers as described above.
+        </p>
+
+        <p>
+          We may disclose information where required by law or where
+          necessary to investigate fraud, protect users or prevent abuse.
+        </p>
+
+        <p>
+          Leaderboards display participating top players’ display names,
+          selected avatars and Coins earned during the relevant period
+          to other app users.
+        </p>
+      </div>
+    </details>
+
+    <details id="retention">
+      <summary>14. Data Retention</summary>
+      <div class="section-body">
+        <p>
+          Account, profile and progress information is retained while
+          the account exists.
+        </p>
+
+        <p>
+          Coin activity and reward-request records are retained to
+          maintain balances, process requests and investigate abuse.
+          Limited records may remain after account deletion where
+          necessary for security, fraud prevention, legal obligations
+          or resolving disputes.
+        </p>
+
+        <p>
+          Short-lived operational records, such as daily activity state
+          and advertising claims, are removed automatically after their
+          applicable retention period.
+        </p>
+
+        <p>
+          You can contact us for information about retention relevant
+          to your account.
+        </p>
+      </div>
+    </details>
+
+    <details id="security">
+      <summary>15. Data Security</summary>
+      <div class="section-body">
+        <p>
+          Safeguards include encrypted connections, server-side reward
+          checks, database access rules and Firebase App Check.
+        </p>
+
+        <p>
+          No storage or transmission system is completely secure.
+          We cannot guarantee absolute security.
+          Keep your sign-in information private.
+        </p>
+      </div>
+    </details>
+
+    <details id="rights">
+      <summary>16. Your Choices and Rights</summary>
+      <div class="section-body">
+        <p>
+          Depending on your location, you may have rights to access,
+          correct or delete personal information; request portability;
+          object to or restrict processing; and withdraw consent.
+        </p>
+
+        <p>
+          Advertising choices are available through Profile, then
+          Privacy choices. Diagnostics preferences are available through
+          Profile, then Legal.
+        </p>
+
+        <p>
+          To make a privacy request, email
+          <a href="mailto:freerbxrewards.help@gmail.com">
+            freerbxrewards.help@gmail.com
+          </a>.
+          We may request information needed to verify account ownership.
+          Do not send passwords or authentication codes.
+        </p>
+      </div>
+    </details>
+
+    <section
+      id="delete-account"
+      class="deletion-section"
+      aria-labelledby="deletion-heading"
+    >
+      <h2 id="deletion-heading">17. Delete Account and Data</h2>
+
+      <p>
+        Users of <strong>BuxRo: Games &amp; Rewards</strong> can request
+        deletion of their account and associated personal data.
+        You can request deletion without reinstalling the app.
+      </p>
+
+      <h3>Delete through the app</h3>
+
+      <ol>
+        <li>Open BuxRo: Games &amp; Rewards and sign in.</li>
+        <li>Open Profile.</li>
+        <li>Select Delete Account.</li>
+        <li>Review the information and confirm.</li>
+      </ol>
+
+      <p>
+        The existing deletion flow blocks deletion while a reward
+        request is being processed. A pending request can be cancelled
+        through Profile, then History, before retrying deletion.
+        If this prevents deletion or you cannot access your account,
+        use the email request method below.
+      </p>
+
+      <h3>Request deletion without the app</h3>
+
+      <p>
+        Email
+        <a href="mailto:freerbxrewards.help@gmail.com">
+          freerbxrewards.help@gmail.com
+        </a>
+        with the subject <strong>Account Deletion Request</strong>.
+        Include your in-app username and, where possible, send the
+        request from the email address associated with your account.
+        Guest users can also contact us.
+      </p>
+
+      <p>
+        Do not include passwords, Google credentials or verification
+        codes. We may ask for additional information necessary to
+        verify ownership.
+      </p>
+
+      <a
+        class="contact-link"
+        href="mailto:freerbxrewards.help@gmail.com?subject=Account%20Deletion%20Request"
+      >
+        Request account deletion by email
+      </a>
+
+      <h3>Information deleted</h3>
+
+      <ul>
+        <li>Account and profile information and associated sign-in.</li>
+        <li>App progress, Coin balance, missions and streak.</li>
+        <li>Public profile and leaderboard entries.</li>
+        <li>Notification tokens and associated device records.</li>
+        <li>Other Firebase records directly linked to the account.</li>
+      </ul>
+
+      <h3>Information that may be retained</h3>
+
+      <p>
+        Limited Coin activity and completed reward-request records may
+        be retained where necessary for fraud prevention, security,
+        legal obligations or resolving disputes, and only for as long
+        as needed for those purposes. Records are anonymized where
+        possible.
+      </p>
+
+      <p>
+        Google may independently retain information it processes as an
+        advertising provider under its own policies.
+        Uninstalling the app or signing out does not delete server-side
+        account information.
+      </p>
+    </section>
+
+    <details id="children">
+      <summary>18. Children</summary>
+      <div class="section-body">
+        <p>
+          The app is intended for users aged 13 and over.
+          Advertising content is limited to a teen rating.
+        </p>
+
+        <p>
+          We do not knowingly collect personal information from children
+          under 13. If you believe a child under 13 has provided personal
+          information, contact us so we can investigate and delete it.
+        </p>
+      </div>
+    </details>
+
+    <details id="unofficial">
+      <summary>19. Independent App</summary>
+      <div class="section-body">
+        <p>
+          BuxRo: Games &amp; Rewards is independently operated.
+          It is not affiliated with, endorsed by, sponsored by,
+          authorized by or approved by Roblox Corporation.
+        </p>
+
+        <p>
+          Roblox and Robux are trademarks of Roblox Corporation.
+          References identify relevant third-party services or
+          functionality. BuxRo Coins are not Robux and have no cash value.
+        </p>
+      </div>
+    </details>
+
+    <details id="changes">
+      <summary>20. Changes to This Policy</summary>
+      <div class="section-body">
+        <p>
+          We may update this policy when the app or its data practices
+          change. The date at the top identifies the latest policy
+          revision.
+        </p>
+      </div>
+    </details>
+
+    <details id="contact" open>
+      <summary>21. Contact Us</summary>
+      <div class="section-body">
+        <p>
+          <strong>Developer:</strong> Mad Axe Studios
+        </p>
+
+        <p>
+          <strong>App:</strong> BuxRo: Games &amp; Rewards
+        </p>
+
+        <p>
+          <strong>Package:</strong>
+          <code>com.madaxe.sohan.robloxreward</code>
+        </p>
+
+        <p>
+          For privacy questions, data requests or account deletion:
+        </p>
+
+        <a
+          class="contact-link"
+          href="mailto:freerbxrewards.help@gmail.com"
+        >
+          freerbxrewards.help@gmail.com
+        </a>
+      </div>
+    </details>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Mad Axe Studios — BuxRo: Games &amp; Rewards</p>
+    <p>
+      <a href="#intro">Privacy policy</a>
+      &nbsp;·&nbsp;
+      <a href="#delete-account">Account deletion</a>
+      &nbsp;·&nbsp;
+      <a href="#contact">Contact</a>
+    </p>
+  </footer>
+
+  <script>
+    function openLinkedSection() {
+      const id = window.location.hash.slice(1);
+      if (!id) return;
+
+      const section = document.getElementById(id);
+      if (!section) return;
+
+      if (section.tagName === "DETAILS") {
+        section.open = true;
+      }
+
+      section.scrollIntoView({
+        block: "start"
+      });
+    }
+
+    window.addEventListener("hashchange", openLinkedSection);
+    window.addEventListener("DOMContentLoaded", openLinkedSection);
+  </script>
 </body>
 </html>
